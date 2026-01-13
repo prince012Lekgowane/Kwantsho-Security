@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kwantsho Security | Premium Security Solutions in Pretoria</title>
+    <title>Kwantsho Security | Armed Response & Security Services Pretoria | 24/7 Protection</title>
+    <meta name="description" content="Premium armed response, drone surveillance & security solutions in Pretoria. PSIRA registered. 24/7 monitoring. Fast response times. Get a free quote today!">
+    <meta name="keywords" content="armed response Pretoria, security companies Pretoria, home security Pretoria, drone surveillance, CCTV installation, alarm systems, panic button, security guards Pretoria, 24/7 security monitoring">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -11,375 +14,716 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+        :root {
+            --primary: #1e40af;
+            --secondary: #dc2626;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gold: #fbbf24;
         }
 
-        /* Header & Navigation */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        /* Header */
         header {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: white;
-            padding: 1rem 0;
+            background: rgba(15, 23, 42, 0.98);
+            backdrop-filter: blur(10px);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .top-bar {
+            background: var(--secondary);
+            color: white;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .top-bar-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.25rem 0;
+        }
+
+        .top-bar-item i {
+            color: var(--gold);
         }
 
         nav {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
+            padding: 1rem 2rem;
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
             font-size: 1.5rem;
-            font-weight: bold;
-            color: #00d4ff;
+            font-weight: 800;
+            color: white;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: var(--gold);
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
+            align-items: center;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            transition: color 0.3s;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
         }
 
         nav a:hover {
-            color: #00d4ff;
+            color: var(--gold);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--secondary), #b91c1c);
+            color: white !important;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .nav-cta::after {
+            display: none;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(22, 33, 62, 0.95)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23162138" width="1200" height="600"/><circle cx="200" cy="100" r="150" fill="%231a1a2e" opacity="0.5"/><circle cx="1000" cy="500" r="200" fill="%231a1a2e" opacity="0.5"/></svg>');
-            background-size: cover;
-            background-position: center;
+            position: relative;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            margin-top: 60px;
+            overflow: hidden;
         }
 
-        .hero-content {
-            max-width: 800px;
-            padding: 2rem;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s 0.2s both;
-        }
-
-        .cta-button {
-            background: linear-gradient(135deg, #00d4ff, #0099cc);
-            color: white;
-            padding: 1rem 2.5rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: fadeInUp 1s 0.4s both;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
-        }
-
-        /* App Features Section */
-        .app-section {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #1a1a2e;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 3rem;
-        }
-
-        .app-features {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card h3 {
-            color: #1a1a2e;
-            margin-bottom: 1rem;
-        }
-
-        /* Products Section */
-        .products-section {
-            padding: 5rem 2rem;
-            background: #1a1a2e;
-            color: white;
-        }
-
-        .products-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .product-card {
-            background: linear-gradient(135deg, #16213e, #0f3460);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 2px solid #00d4ff;
-            transition: transform 0.3s;
-        }
-
-        .product-card:hover {
-            transform: scale(1.05);
-        }
-
-        .product-card h3 {
-            color: #00d4ff;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .price {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #00d4ff;
-            margin: 1rem 0;
-        }
-
-        .product-features {
-            list-style: none;
-            margin: 1rem 0;
-        }
-
-        .product-features li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .product-features li:before {
-            content: "✓ ";
-            color: #00d4ff;
-            font-weight: bold;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .contact-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-button {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            cursor: pointer;
-            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
-            transition: transform 0.3s;
-            z-index: 1000;
-            border: none;
-        }
-
-        .whatsapp-button:hover {
-            transform: scale(1.1);
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
+        .hero-bg {
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.7);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 64, 175, 0.85)),
+                        url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
-        .modal.active {
-            display: flex;
-        }
-
-        .modal-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            max-width: 500px;
-            width: 90%;
-            color: #333;
-            animation: slideIn 0.3s;
-        }
-
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .modal-header h3 {
-            color: #1a1a2e;
-            font-size: 1.5rem;
-        }
-
-        .close-button {
-            background: none;
-            border: none;
-            font-size: 2rem;
-            cursor: pointer;
-            color: #666;
-        }
-
-        .modal textarea {
+        .hero-particles {
+            position: absolute;
             width: 100%;
-            padding: 1rem;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-family: inherit;
-            min-height: 150px;
-            margin-bottom: 1rem;
+            height: 100%;
+            opacity: 0.1;
         }
 
-        .submit-button {
-            background: #25D366;
-            color: white;
-            padding: 1rem 2rem;
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 2rem;
+            margin-top: 80px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--gold), #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            color: #e2e8f0;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
             border: none;
             border-radius: 50px;
             font-size: 1.1rem;
+            font-weight: 600;
             cursor: pointer;
-            width: 100%;
-            transition: background 0.3s;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
         }
 
-        .submit-button:hover {
-            background: #1da851;
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary), #b91c1c);
+            color: white;
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.5);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--dark);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 -10px 50px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .badges-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .badge i {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .badge strong {
+            font-size: 1.5rem;
+            color: var(--dark);
+        }
+
+        .badge span {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 2rem;
+            background: linear-gradient(180deg, #f8fafc 0%, white 100%);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-tag {
+            color: var(--secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #64748b;
+        }
+
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .service-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .service-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        }
+
+        .service-icon {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            background: var(--gold);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--dark);
+            z-index: 1;
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-content h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .service-content p {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-features li i {
+            color: var(--primary);
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            padding: 6rem 2rem;
+            background: var(--dark);
+            color: white;
+        }
+
+        .why-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .why-item {
+            text-align: center;
+        }
+
+        .why-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), #3b82f6);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 10px 30px rgba(30, 64, 175, 0.3);
+        }
+
+        .why-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .why-item p {
+            color: #94a3b8;
+        }
+
+        /* App Section */
+        .app-showcase {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .app-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .app-image {
+            position: relative;
+        }
+
+        .app-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 30px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.2);
+        }
+
+        .app-features-list {
+            list-style: none;
+        }
+
+        .app-features-list li {
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            background: #f8fafc;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s;
+        }
+
+        .app-features-list li:hover {
+            background: var(--light);
+            transform: translateX(10px);
+        }
+
+        .app-features-list i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            width: 40px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--primary), #3b82f6);
+            color: white;
+        }
+
+        .testimonials-grid {
+            max-width: 1400px;
+            margin: 4rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--dark);
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--secondary), #b91c1c);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
         }
 
         /* Footer */
         footer {
-            background: #1a1a2e;
+            background: var(--dark);
             color: white;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
             text-align: center;
-            padding: 2rem;
+            color: #64748b;
         }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.5);
+            cursor: pointer;
+            z-index: 999;
+            transition: all 0.3s;
+            border: none;
+            animation: pulse 2s infinite;
         }
 
-        @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 50px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .app-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
                 font-size: 2rem;
             }
-            
-            .hero p {
-                font-size: 1rem;
+
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
             }
-            
-            nav ul {
-                gap: 1rem;
-                font-size: 0.9rem;
+
+            .top-bar-content {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
@@ -387,206 +731,531 @@
 <body>
     <!-- Header -->
     <header>
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <div class="top-bar-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>PSIRA Registered & Licensed</span>
+                </div>
+                <div class="top-bar-item">
+                    <i class="fas fa-phone"></i>
+                    <span>24/7 Emergency: 082 589 8514</span>
+                </div>
+                <div class="top-bar-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Response Time: Under 5 Minutes</span>
+                </div>
+            </div>
+        </div>
         <nav>
-            <div class="logo">🛡️ KWANTSHO SHIELD</div>
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>KWANTSHO SECURITY</span>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#app">Mobile App</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="nav-cta">Get Protected</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-bg"></div>
         <div class="hero-content">
-            <h1>Protecting Pretoria, One Home at a Time</h1>
-            <p>Advanced security solutions with instant panic button response, drone surveillance, and 24/7 monitoring for your peace of mind</p>
-            <a href="#contact" class="cta-button">Get Protected Today</a>
-        </div>
-    </section>
-
-    <!-- App Features Section -->
-    <section id="features" class="app-section">
-        <h2 class="section-title">Our Mobile App Features</h2>
-        <p class="section-subtitle">Advanced technology at your fingertips</p>
-        <div class="app-features">
-            <div class="feature-card">
-                <div class="feature-icon">🚨</div>
-                <h3>Instant Panic Button</h3>
-                <p>One-tap emergency response with GPS location sharing. Our armed response team is dispatched immediately to your location with an average response time of under 5 minutes.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📱</div>
-                <h3>Real-Time Tracking</h3>
-                <p>Track our response vehicles in real-time on the app. Know exactly when help is arriving and receive instant notifications throughout the emergency response process.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📹</div>
-                <h3>Live Camera Access</h3>
-                <p>View all your connected security cameras from anywhere. Receive motion alerts and review footage directly from your smartphone with cloud storage options.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">👥</div>
-                <h3>Family Protection</h3>
-                <p>Add multiple family members to your account. Each member gets their own panic button access and you can monitor their safety status in real-time.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🔔</div>
-                <h3>Smart Alerts</h3>
-                <p>Receive intelligent notifications for unusual activity, armed/disarmed status changes, and scheduled patrol updates customized to your preferences.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📊</div>
-                <h3>Security Reports</h3>
-                <p>Access detailed monthly security reports, incident logs, and patrol history. Stay informed about security trends in your neighborhood.</p>
+            <h1>Pretoria's Most <span>Advanced</span> Security Solutions</h1>
+            <p>Armed response, drone surveillance, and 24/7 monitoring with cutting-edge technology and rapid response times</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary" onclick="openWhatsApp(event, 'I want to get protected with Kwantsho Security')">
+                    <i class="fab fa-whatsapp"></i> Get Instant Quote
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    <i class="fas fa-info-circle"></i> Our Services
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="products-section">
-        <h2 class="section-title">Security Packages & Add-Ons</h2>
-        <p class="section-subtitle">Tailored solutions for every security need</p>
-        <div class="products-grid">
-            <div class="product-card">
-                <h3>Basic Protection</h3>
-                <div class="price">R499/month</div>
-                <ul class="product-features">
-                    <li>Mobile app access</li>
-                    <li>Instant panic button</li>
-                    <li>Armed response 24/7</li>
-                    <li>2 family members</li>
-                    <li>Email support</li>
-                </ul>
+    <!-- Trust Badges -->
+    <div class="trust-badges">
+        <div class="badges-container">
+            <div class="badge">
+                <i class="fas fa-clock"></i>
+                <strong>&lt; 5 Min</strong>
+                <span>Response Time</span>
             </div>
-            <div class="product-card">
-                <h3>Premium Shield</h3>
-                <div class="price">R899/month</div>
-                <ul class="product-features">
-                    <li>Everything in Basic</li>
-                    <li>Drone surveillance (2 flights/month)</li>
-                    <li>4 camera monitoring</li>
-                    <li>5 family members</li>
-                    <li>Priority response</li>
-                    <li>24/7 phone support</li>
-                </ul>
+            <div class="badge">
+                <i class="fas fa-users"></i>
+                <strong>500+</strong>
+                <span>Clients Protected</span>
             </div>
-            <div class="product-card">
-                <h3>Elite Guardian</h3>
-                <div class="price">R1,499/month</div>
-                <ul class="product-features">
-                    <li>Everything in Premium</li>
-                    <li>Unlimited drone flights</li>
-                    <li>Unlimited cameras</li>
-                    <li>Unlimited family members</li>
-                    <li>AI threat detection</li>
-                    <li>Dedicated account manager</li>
-                    <li>Free equipment upgrades</li>
-                </ul>
+            <div class="badge">
+                <i class="fas fa-shield-alt"></i>
+                <strong>24/7</strong>
+                <span>Armed Response</span>
             </div>
-            <div class="product-card">
-                <h3>Drone Add-On</h3>
-                <div class="price">R299/month</div>
-                <ul class="product-features">
-                    <li>Automated perimeter patrols</li>
-                    <li>Night vision surveillance</li>
-                    <li>Motion-triggered deployment</li>
-                    <li>4K video recording</li>
-                    <li>Thermal imaging</li>
-                </ul>
+            <div class="badge">
+                <i class="fas fa-certificate"></i>
+                <strong>PSIRA</strong>
+                <span>Licensed</span>
             </div>
-            <div class="product-card">
-                <h3>Smart Home Integration</h3>
-                <div class="price">R399/month</div>
-                <ul class="product-features">
-                    <li>Smart lock control</li>
-                    <li>Automated lighting</li>
-                    <li>Gate automation</li>
-                    <li>Voice assistant integration</li>
-                    <li>Energy monitoring</li>
-                </ul>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <div class="section-tag">OUR SERVICES</div>
+            <h2>Complete Security Solutions for Your Peace of Mind</h2>
+            <p>From armed response to drone surveillance, we provide comprehensive security services tailored to protect what matters most</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=800&q=80')">
+                    <div class="service-icon">
+                        <i class="fas fa-siren-on"></i>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h3>Armed Response Services</h3>
+                    <p>Professional armed response team available 24/7 with average response times under 5 minutes across Pretoria</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Instant panic button activation</li>
+                        <li><i class="fas fa-check"></i> GPS-tracked response vehicles</li>
+                        <li><i class="fas fa-check"></i> PSIRA registered officers</li>
+                        <li><i class="fas fa-check"></i> Real-time mobile app updates</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" onclick="openWhatsApp(event, 'I want to learn more about Armed Response Services')">
+                        <i class="fab fa-whatsapp"></i> Get Started
+                    </a>
+                </div>
             </div>
-            <div class="product-card">
-                <h3>Business Security</h3>
-                <div class="price">Custom Pricing</div>
-                <ul class="product-features">
-                    <li>Multiple location support</li>
-                    <li>Access control systems</li>
-                    <li>Employee monitoring</li>
-                    <li>Custom patrol schedules</li>
-                    <li>Dedicated security team</li>
-                </ul>
+
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&q=80')">
+                    <div class="service-icon">
+                        <i class="fas fa-helicopter"></i>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h3>Drone Surveillance</h3>
+                    <p>State-of-the-art drone technology for aerial monitoring, perimeter patrols, and rapid incident assessment</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 4K video & thermal imaging</li>
+                        <li><i class="fas fa-check"></i> Automated patrol schedules</li>
+                        <li><i class="fas fa-check"></i> Motion-triggered deployment</li>
+                        <li><i class="fas fa-check"></i> AI threat detection</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" onclick="openWhatsApp(event, 'I want to learn more about Drone Surveillance')">
+                        <i class="fab fa-whatsapp"></i> Learn More
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&q=80')">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h3>CCTV & Monitoring</h3>
+                    <p>Professional CCTV installation with 24/7 monitoring from our state-of-the-art control center</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> HD IP camera installation</li>
+                        <li><i class="fas fa-check"></i> Cloud storage & remote access</li>
+                        <li><i class="fas fa-check"></i> Motion detection alerts</li>
+                        <li><i class="fas fa-check"></i> Night vision capabilities</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" onclick="openWhatsApp(event, 'I want to learn more about CCTV & Monitoring')">
+                        <i class="fab fa-whatsapp"></i> Request Quote
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80')">
+                    <div class="service-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h3>Alarm Systems</h3>
+                    <p>Advanced alarm systems with instant notifications and automatic armed response dispatch</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Wireless & wired systems</li>
+                        <li><i class="fas fa-check"></i> Mobile app control</li>
+                        <li><i class="fas fa-check"></i> Pet-immune sensors</li>
+                        <li><i class="fas fa-check"></i> Backup battery systems</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" onclick="openWhatsApp(event, 'I want to learn more about Alarm Systems')">
+                        <i class="fab fa-whatsapp"></i> Get Quote
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&q=80')">
+                    <div class="service-icon">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h3>Access Control</h3>
+                    <p>Sophisticated access control systems for residential estates, commercial properties, and gated communities</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Biometric systems</li>
+                        <li><i class="fas fa-check"></i> RFID & card access</li>
+                        <li><i class="fas fa-check"></i> Intercom integration</li>
+                        <li><i class="fas fa-check"></i> Visitor management</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" onclick="openWhatsApp(event, 'I want to learn more about Access Control Systems')">
+                        <i class="fab fa-whatsapp"></i> Request Info
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=800&q=80')">
+                    <div class="service-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <h3>Security Guards</h3>
+                    <p>Professional, trained security personnel for events, construction sites, and permanent deployment</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> PSIRA registered guards</li>
+                        <li><i class="fas fa-check"></i> Armed & unarmed options</li>
+                        <li><i class="fas fa-check"></i> 24/7 shift coverage</li>
+                        <li><i class="fas fa-check"></i> Incident reporting</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" onclick="openWhatsApp(event, 'I want to learn more about Security Guard Services')">
+                        <i class="fab fa-whatsapp"></i> Contact Us
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Ready to Secure Your Home?</h2>
-        <p>Contact us today for a free security assessment and quote</p>
-        <a href="#" class="cta-button" onclick="event.preventDefault(); openModal()">Get a Free Quote</a>
+    <!-- Why Choose Us -->
+    <section id="about" class="why-choose">
+        <div class="section-header">
+            <div class="section-tag">WHY CHOOSE US</div>
+            <h2>Your Safety is Our Priority</h2>
+            <p>Experience the difference with Pretoria's most trusted security provider</p>
+        </div>
+
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="why-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Rapid Response</h3>
+                <p>Average response time under 5 minutes across all Pretoria areas with GPS-tracked vehicles</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Advanced Technology</h3>
+                <p>Cutting-edge mobile app, drone surveillance, and AI-powered threat detection systems</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>Fully Licensed</h3>
+                <p>PSIRA registered and compliant with all South African security industry regulations</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>24/7 Support</h3>
+                <p>Round-the-clock control center monitoring and customer support always available</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">
+                    <i class="fas fa-users-cog"></i>
+                </div>
+                <h3>Expert Team</h3>
+                <p>Highly trained, vetted, and professional security officers with years of experience</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <h3>Competitive Pricing</h3>
+                <p>Premium security services at affordable rates with flexible payment options</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile App Showcase -->
+    <section id="app" class="app-showcase">
+        <div class="app-content">
+            <div class="app-image">
+                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&q=80" alt="Kwantsho Security Mobile App">
+            </div>
+            <div>
+                <div class="section-tag">MOBILE APP</div>
+                <h2>Your Security in Your Pocket</h2>
+                <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 2rem;">Control your entire security system from anywhere with our advanced mobile application</p>
+                
+                <ul class="app-features-list">
+                    <li>
+                        <i class="fas fa-hand-point-up"></i>
+                        <div>
+                            <strong>One-Touch Panic Button</strong>
+                            <p style="margin: 0; color: #64748b; font-size: 0.9rem;">Instant emergency alert with GPS location sharing to armed response team</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marked-alt"></i>
+                        <div>
+                            <strong>Live Response Tracking</strong>
+                            <p style="margin: 0; color: #64748b; font-size: 0.9rem;">Watch our response vehicles arrive in real-time on the map</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-video"></i>
+                        <div>
+                            <strong>Camera Access</strong>
+                            <p style="margin: 0; color: #64748b; font-size: 0.9rem;">View all your CCTV cameras and receive motion alerts instantly</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <strong>Family Protection</strong>
+                            <p style="margin: 0; color: #64748b; font-size: 0.9rem;">Add family members and monitor their safety status</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-bell"></i>
+                        <div>
+                            <strong>Smart Notifications</strong>
+                            <p style="margin: 0; color: #64748b; font-size: 0.9rem;">Customized alerts for all security events and system status</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <a href="#" class="btn btn-primary" onclick="openWhatsApp(event, 'I want to get the Kwantsho Security mobile app')">
+                    <i class="fab fa-whatsapp"></i> Get App Access
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-header">
+            <div class="section-tag" style="color: var(--gold);">TESTIMONIALS</div>
+            <h2>What Our Clients Say</h2>
+            <p>Join hundreds of satisfied clients across Pretoria who trust us with their safety</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Kwantsho Security responded to our emergency in under 4 minutes. Their professionalism and quick action prevented a potential break-in. The mobile app is incredibly user-friendly and gives us peace of mind 24/7."</p>
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">JM</div>
+                    <div>
+                        <strong>John Marais</strong><br>
+                        <small>Waterkloof, Pretoria</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"The drone surveillance is a game changer! We can monitor our entire property from the app, and the AI detection has already alerted us to suspicious activity twice. Best security investment we've made."</p>
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">SP</div>
+                    <div>
+                        <strong>Sarah Pieterse</strong><br>
+                        <small>Menlyn, Pretoria</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"After comparing multiple security companies, Kwantsho stood out with their technology and response times. Three months in and we couldn't be happier. The control center is always responsive and professional."</p>
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">TN</div>
+                    <div>
+                        <strong>Thabo Ndlovu</strong><br>
+                        <small>Brooklyn, Pretoria</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Secure Your Property?</h2>
+            <p>Get a free security assessment and personalized quote today. Our team is ready to protect what matters most to you.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-secondary" onclick="openWhatsApp(event, 'I would like a free security assessment and quote')">
+                    <i class="fab fa-whatsapp"></i> Get Free Quote
+                </a>
+                <a href="tel:0825898514" class="btn btn-primary" style="background: white; color: var(--secondary);">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Kwantsho Security | Pretoria, South Africa</p>
-        <p>📞 082 589 8514 | 📧 rohithan210@gmail.com</p>
-        <p>Licensed & Registered with PSIRA | Reg No: 1234567</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>KWANTSHO SECURITY</h3>
+                <p style="color: #94a3b8;">Protecting Pretoria with advanced security solutions, rapid response times, and cutting-edge technology.</p>
+                <div style="margin-top: 1.5rem;">
+                    <i class="fas fa-shield-alt" style="color: var(--gold); font-size: 3rem;"></i>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#services">Armed Response</a></li>
+                    <li><a href="#services">Drone Surveillance</a></li>
+                    <li><a href="#services">CCTV Monitoring</a></li>
+                    <li><a href="#services">Alarm Systems</a></li>
+                    <li><a href="#services">Access Control</a></li>
+                    <li><a href="#services">Security Guards</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#app">Mobile App</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 1rem;">
+                        <i class="fas fa-phone" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                        <a href="tel:0825898514">082 589 8514</a>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <i class="fas fa-envelope" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                        <a href="mailto:rohithan210@gmail.com">rohithan210@gmail.com</a>
+                    </li>
+                    <li style="margin-bottom: 1rem;">
+                        <i class="fas fa-map-marker-alt" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                        Pretoria, Gauteng, South Africa
+                    </li>
+                    <li>
+                        <i class="fas fa-clock" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                        24/7 Emergency Response
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kwantsho Security. All rights reserved.</p>
+            <p>PSIRA Registered | Licensed Security Provider</p>
+        </div>
     </footer>
 
-    <!-- WhatsApp Button -->
-    <button class="whatsapp-button" onclick="openModal()">💬</button>
-
-    <!-- Modal -->
-    <div id="whatsappModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Send us a WhatsApp Message</h3>
-                <button class="close-button" onclick="closeModal()">&times;</button>
-            </div>
-            <textarea id="messageText" placeholder="Type your message here... (e.g., I'm interested in the Premium Shield package and would like more information about drone surveillance)"></textarea>
-            <button class="submit-button" onclick="sendWhatsApp()">Send Message via WhatsApp</button>
-        </div>
-    </div>
+    <!-- WhatsApp Floating Button -->
+    <button class="whatsapp-float" onclick="openWhatsApp(event, 'Hello! I would like to inquire about your security services')">
+        <i class="fab fa-whatsapp"></i>
+    </button>
 
     <script>
-        function openModal() {
-            document.getElementById('whatsappModal').classList.add('active');
-        }
-
-        function closeModal() {
-            document.getElementById('whatsappModal').classList.remove('active');
-        }
-
-        function sendWhatsApp() {
-            const message = document.getElementById('messageText').value;
-            const phoneNumber = '27825898514'; // Replace with actual WhatsApp number
-            const encodedMessage = encodeURIComponent(message || 'Hello, I would like to inquire about your security services.');
+        // WhatsApp Function
+        function openWhatsApp(event, message) {
+            event.preventDefault();
+            const phoneNumber = '27825898514';
+            const encodedMessage = encodeURIComponent(message);
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
             window.open(whatsappURL, '_blank');
-            closeModal();
         }
 
-        // Close modal when clicking outside
-        document.getElementById('whatsappModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal();
-            }
-        });
-
-        // Smooth scrolling for navigation links
+        // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
                 if (href !== '#' && document.querySelector(href)) {
                     e.preventDefault();
-                    document.querySelector(href).scrollIntoView({
+                    const target = document.querySelector(href);
+                    const headerOffset = 100;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
                         behavior: 'smooth'
                     });
                 }
             });
+        });
+
+        // Header scroll effect
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.background = 'rgba(15, 23, 42, 0.98)';
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.3)';
+            } else {
+                header.style.background = 'rgba(15, 23, 42, 0.98)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Animate on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .why-item, .testimonial-card').forEach((el) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
         });
     </script>
 </body>
