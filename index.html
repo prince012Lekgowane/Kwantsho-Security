@@ -6,6 +6,23 @@
     <title>Kwantsho Security | Armed Response & Security Services Pretoria | 24/7 Protection</title>
     <meta name="description" content="Premium armed response, drone surveillance & security solutions in Pretoria. PSIRA registered. 24/7 monitoring. Fast response times. Get a free quote today!">
     <meta name="keywords" content="armed response Pretoria, security companies Pretoria, home security Pretoria, drone surveillance, CCTV installation, alarm systems, panic button, security guards Pretoria, 24/7 security monitoring">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Kwantsho Security | Armed Response & Security Services Pretoria">
+    <meta property="og:description" content="Premium armed response, drone surveillance & 24/7 security monitoring in Pretoria. PSIRA registered with response times under 5 minutes.">
+    <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/flutter-fef59.appspot.com/o/batau.jpg?alt=media&token=16c7c792-27d4-428d-8bad-97a2b5bbc601">
+    <meta property="og:url" content="https://kwantsho.teloss.co.za/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kwantsho Security | Armed Response & Security Services Pretoria">
+    <meta name="twitter:description" content="Premium armed response, drone surveillance & 24/7 security monitoring in Pretoria. PSIRA registered with response times under 5 minutes.">
+    <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/flutter-fef59.appspot.com/o/batau.jpg?alt=media&token=16c7c792-27d4-428d-8bad-97a2b5bbc601">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://firebasestorage.googleapis.com/v0/b/flutter-fef59.appspot.com/o/batau.jpg?alt=media&token=16c7c792-27d4-428d-8bad-97a2b5bbc601">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -40,34 +57,6 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
-        .top-bar {
-            background: var(--secondary);
-            color: white;
-            padding: 0.5rem 0;
-            font-size: 0.9rem;
-        }
-
-        .top-bar-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .top-bar-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin: 0.25rem 0;
-        }
-
-        .top-bar-item i {
-            color: var(--gold);
-        }
-
         nav {
             max-width: 1400px;
             margin: 0 auto;
@@ -86,9 +75,11 @@
             color: white;
         }
 
-        .logo i {
-            font-size: 2rem;
-            color: var(--gold);
+        .logo img {
+            height: 60px;
+            width: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         nav ul {
@@ -609,6 +600,36 @@
             padding: 4rem 2rem 2rem;
         }
 
+        .footer-top-bar {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+            margin: -4rem -2rem 3rem -2rem;
+        }
+
+        .footer-top-bar-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-top-bar-item i {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
         .footer-content {
             max-width: 1400px;
             margin: 0 auto;
@@ -721,9 +742,13 @@
                 grid-template-columns: 1fr;
             }
 
-            .top-bar-content {
+            .footer-top-bar-content {
                 flex-direction: column;
                 text-align: center;
+            }
+
+            .logo img {
+                height: 45px;
             }
         }
     </style>
@@ -731,25 +756,9 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="top-bar">
-            <div class="top-bar-content">
-                <div class="top-bar-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>PSIRA Registered & Licensed</span>
-                </div>
-                <div class="top-bar-item">
-                    <i class="fas fa-phone"></i>
-                    <span>24/7 Emergency: 082 589 8514</span>
-                </div>
-                <div class="top-bar-item">
-                    <i class="fas fa-clock"></i>
-                    <span>Response Time: Under 5 Minutes</span>
-                </div>
-            </div>
-        </div>
         <nav>
             <div class="logo">
-                <i class="fas fa-shield-alt"></i>
+                <img src="https://firebasestorage.googleapis.com/v0/b/flutter-fef59.appspot.com/o/batau.jpg?alt=media&token=16c7c792-27d4-428d-8bad-97a2b5bbc601" alt="Kwantsho Security Logo">
                 <span>KWANTSHO SECURITY</span>
             </div>
             <button class="mobile-menu-btn">
@@ -769,7 +778,7 @@
     <section id="home" class="hero">
         <div class="hero-bg"></div>
         <div class="hero-content">
-            <h1>Pretoria's Most <span>Advanced</span> Security Solutions</h1>
+            <h1>Pretoria's <span>Advanced</span> Security Solutions</h1>
             <p>Armed response, drone surveillance, and 24/7 monitoring with cutting-edge technology and rapid response times</p>
             <div class="hero-buttons">
                 <a href="#" class="btn btn-primary" onclick="openWhatsApp(event, 'I want to get protected with Kwantsho Security')">
@@ -1125,6 +1134,23 @@
 
     <!-- Footer -->
     <footer>
+        <div class="footer-top-bar">
+            <div class="footer-top-bar-content">
+                <div class="footer-top-bar-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>PSIRA Registered & Licensed</span>
+                </div>
+                <div class="footer-top-bar-item">
+                    <i class="fas fa-phone"></i>
+                    <span>24/7 Emergency: 082 589 8514</span>
+                </div>
+                <div class="footer-top-bar-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Response Time: Under 5 Minutes</span>
+                </div>
+            </div>
+        </div>
+        
         <div class="footer-content">
             <div class="footer-section">
                 <h3>KWANTSHO SECURITY</h3>
